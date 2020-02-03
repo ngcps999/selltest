@@ -1,0 +1,57 @@
+<!--
+  ~ 日期：2020/1/30 下午4:30
+  ~ 文件名：pay.html
+  ~ 文件路径：/Users/xuda/Library/Mobile Documents/com~apple~CloudDocs/ideaProject/selltest/src/main/resources/static/pay.html
+  ~ 项目名称：selltest
+  ~ 模块名称：selltest
+  ~ 作者：xuda
+  -->
+
+<!--
+  ~ 日期：2020/1/30 下午4:22
+  ~ 文件名：pay.html
+  ~ 文件路径：/Users/xuda/Library/Mobile Documents/com~apple~CloudDocs/ideaProject/selltest/src/main/resources/static/api/pay.html
+  ~ 项目名称：selltest
+  ~ 模块名称：selltest
+  ~ 作者：xuda
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function onBridgeReady(){
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest', {
+                "appId":"wxebfd78fa1898d74b",     //公众号名称，由商户传入
+                "timeStamp":"1580373891",         //时间戳，自1970年以来的秒数
+                "nonceStr":"VF9s4jQiJ27sF7TX", //随机串
+                "package":"prepay_id=wx30164451448617536fdc59a41559696800",
+                "signType":"MD5",         //微信签名方式：
+                "paySign":"E581ABF613EDB1E60938650516D3B4F8" //微信签名
+            },
+            function(res){
+                if(res.err_msg == "get_brand_wcpay_request:ok" ){
+                    // 使用以上方式判断前端返回,微信团队郑重提示：
+                    //res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
+                }
+            });
+    }
+    if (typeof WeixinJSBridge == "undefined"){
+        if( document.addEventListener ){
+            document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        }else if (document.attachEvent){
+            document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+        }
+    }else{
+        onBridgeReady();
+    }
+</script>

@@ -15,7 +15,6 @@ import com.lly835.bestpay.model.PayResponse;
 import com.lly835.bestpay.model.RefundRequest;
 import com.lly835.bestpay.model.RefundResponse;
 import com.lly835.bestpay.service.impl.BestPayServiceImpl;
-import com.lly835.bestpay.service.impl.WxPayServiceImpl;
 import com.qxholy.selltest.dto.OrderDTO;
 import com.qxholy.selltest.enums.ResultEnum;
 import com.qxholy.selltest.exception.SellException;

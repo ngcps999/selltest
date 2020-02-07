@@ -20,8 +20,8 @@ import java.awt.print.Pageable;
  * @Date 2020/1/23
  */
 @Getter
-public enum ProductStatusEnum {
-    UP(0, "在架"),
+public enum ProductStatusEnum implements CodeEnum {
+    UP(0, "上架"),
     DOWN(1, "下架");
 
     private Integer code;

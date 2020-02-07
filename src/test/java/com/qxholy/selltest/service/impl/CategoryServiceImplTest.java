@@ -53,11 +53,4 @@ public class CategoryServiceImplTest {
         Assert.assertNotEquals(0,productCategoryList.size());
     }
 
-    @Test
-    public void save() {
-        ProductCategory productCategory = new ProductCategory("男生专享",10);
-        ProductCategory save = categoryService.save(productCategory);
-        Assert.assertNotNull(save);
-
-    }
 }

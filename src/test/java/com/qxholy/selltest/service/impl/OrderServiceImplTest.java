@@ -45,7 +45,7 @@ public class OrderServiceImplTest {
 
     public static String BUYER_OPENID = "123321";
 
-    public static final String ORDER_ID = "1580024196874224491";
+    public static final String ORDER_ID = "1580734578074494968";
 
     @Test
     @Transactional

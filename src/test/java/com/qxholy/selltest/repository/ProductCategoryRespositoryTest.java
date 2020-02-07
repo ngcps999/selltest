@@ -56,14 +56,6 @@ public class ProductCategoryRespositoryTest {
     }
 
     @Test
-    @Transactional
-    public void saveTest1(){
-        ProductCategory productCategory = new ProductCategory("女生最爱",3);
-        ProductCategory category = respository.save(productCategory);
-        Assert.assertNotNull(category);
-    }
-
-    @Test
     public void findByCategoryTypeInTest(){
         List<Integer> list = Arrays.asList(1,2,3,4);
         List<ProductCategory> productCategoryList = respository.findByCategoryTypeIn(list);

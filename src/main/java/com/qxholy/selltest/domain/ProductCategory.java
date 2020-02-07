@@ -26,11 +26,10 @@ public class ProductCategory {
 
     private Integer categoryType;
 
-    public ProductCategory() {
-    }
+    @CreationTimestamp
+    private Date createTime;
 
-    public ProductCategory(String categoryName, Integer categoryType) {
-        this.categoryName = categoryName;
-        this.categoryType = categoryType;
-    }
+    @UpdateTimestamp
+    private Date updateTime;
+
 }

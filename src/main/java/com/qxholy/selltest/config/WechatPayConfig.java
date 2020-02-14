@@ -9,7 +9,7 @@
 
 package com.qxholy.selltest.config;
 
-import com.lly835.bestpay.config.WxPayConfig;
+import com.lly835.bestpay.config.WxPayH5Config;
 import com.lly835.bestpay.service.impl.BestPayServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -29,7 +29,7 @@ public class WechatPayConfig {
 
     @Bean
     public BestPayServiceImpl bestPayService(){
-        WxPayConfig wxPayConfig = new WxPayConfig();
+        WxPayH5Config wxPayConfig = new WxPayH5Config();
         wxPayConfig.setAppId(accountConfig.getMpAppId());
         wxPayConfig.setAppSecret(accountConfig.getMpAppSecret());
         wxPayConfig.setMchId(accountConfig.getMchId());
@@ -38,7 +38,7 @@ public class WechatPayConfig {
         wxPayConfig.setNotifyUrl(accountConfig.getNotifyUrl());
 
         BestPayServiceImpl bestPayService = new BestPayServiceImpl();
-        bestPayService.setWxPayConfig(wxPayConfig);
+        bestPayService.setWxPayH5Config(wxPayConfig);
         return bestPayService;
     }
 

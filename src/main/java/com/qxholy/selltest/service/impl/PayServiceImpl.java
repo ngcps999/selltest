@@ -56,7 +56,7 @@ public class PayServiceImpl implements PayService {
         payRequest.setOrderAmount(orderDTO.getOrderAmount().doubleValue());
         payRequest.setOrderId(orderDTO.getOrderId());
         payRequest.setOrderName(ORDER_NAME);
-        payRequest.setPayTypeEnum(BestPayTypeEnum.WXPAY_MP);
+        payRequest.setPayTypeEnum(BestPayTypeEnum.WXPAY_H5);
         log.info("【微信支付】发起支付，request={}", JsonUtil.toJson(payRequest));
 
         PayResponse payResponse = bestPayService.pay(payRequest);
@@ -101,7 +101,7 @@ public class PayServiceImpl implements PayService {
         RefundRequest refundRequest = new RefundRequest();
         refundRequest.setOrderId(orderDTO.getOrderId());
         refundRequest.setOrderAmount(orderDTO.getOrderAmount().doubleValue());
-        refundRequest.setPayTypeEnum(BestPayTypeEnum.WXPAY_MP);
+        refundRequest.setPayTypeEnum(BestPayTypeEnum.WXPAY_H5);
         log.info("【微信退款】request={}", JsonUtil.toJson(refundRequest));
 
         RefundResponse refundResponse = bestPayService.refund(refundRequest);

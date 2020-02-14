@@ -4,6 +4,7 @@ spring:
     username: root
     password: sdysjdsr1225*
     url: jdbc:mysql://localhost:3306/sell?characterEncoding=utf-8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
   jpa:
     show-sql: on
     hibernate:
@@ -23,6 +24,10 @@ spring:
 #    expose-session-attributes: false
 #    request-context-attribute: request
     suffix: .ftl
+  redis:
+    host: localhost
+    port: 6379
+
 server:
   port: 8082
   servlet:
@@ -38,7 +43,14 @@ server:
 wechat:
   mpAppId: wxebfd78fa1898d74b
   mpAppSecret: 010c2d97fb1fb0433039024c499b497e
+  openAppId: wx8014b755544cd7e5
+  openAppSecret: f39df57e63063329ecfc380b717fe0f4
   mchId: 1541092771
   mchKey: SDysjdsr1225SDysjdsr1225SDysjdsr
   keyPath: /Users/xuda/cert/xd.p12
-  notifyUrl: https://www.qxholy.com/sell/pay/notify
+  notifyUrl: https://qxholy.natappvip.cc/sell/pay/notify
+
+projectUrl:
+  wechatMpAuthorize: https://qxholy.natappvip.cc
+  wechatOpenAuthorize: https://qxholy.natappvip.cc
+  bread: http://www.qxholy.com

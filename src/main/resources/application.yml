@@ -41,16 +41,16 @@ server:
 #    com.qxholy.selltest.LoggerTest: debug
 
 wechat:
-  mpAppId: wxebfd78fa1898d74b
-  mpAppSecret: 010c2d97fb1fb0433039024c499b497e
-  openAppId: wx8014b755544cd7e5
-  openAppSecret: f39df57e63063329ecfc380b717fe0f4
-  mchId: 1541092771
-  mchKey: SDysjdsr1225SDysjdsr1225SDysjdsr
-  keyPath: /Users/xuda/cert/xd.p12
-  notifyUrl: https://qxholy.natappvip.cc/sell/pay/notify
+  mpAppId: 
+  mpAppSecret: 
+  openAppId: 
+  openAppSecret: 
+  mchId: 
+  mchKey: 
+  keyPath: 
+  notifyUrl: 
 
 projectUrl:
-  wechatMpAuthorize: https://qxholy.natappvip.cc
-  wechatOpenAuthorize: https://qxholy.natappvip.cc
-  bread: http://www.qxholy.com
+  wechatMpAuthorize: 
+  wechatOpenAuthorize: 
+  bread: 
